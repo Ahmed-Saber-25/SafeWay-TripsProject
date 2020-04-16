@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/progressTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="please wait for"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <com.victor.loading.rotate.RotateLoading
+            android:layout_below="@+id/progressTitle"
+            android:id="@+id/rotateloading"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:loading_color="@color/colorPrimary"
+            app:loading_width="5dp" />
+
+        <TextView
+            android:layout_below="@+id/rotateloading"
+            android:id="@+id/progress_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/login_edittext_style"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

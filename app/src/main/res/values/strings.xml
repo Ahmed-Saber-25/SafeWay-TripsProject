@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Safe Way</string>
+    <string name="title_activity_home_screen">Safe Way</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_history">Upcoming Trips</string>
+    <string name="menu_upcoming">Trips History</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_sync">Sync</string>
+    <string name="Start">Start Trip</string>
+    <string name="Date">"Date : "</string>
+    <string name="Time">Time :</string>
+    <string name="From">From :</string>
+    <string name="To">To :</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Trip_Name">Trip Name</string>
+    <string name="Start_Point">Start Point</string>
+    <string name="End_Point">End Point</string>
+    <string name="repeat_prompt">Repeat</string>
+    <string-array name="repeat_arrays">
+        <item>No Repeat</item>
+        <item>Repeat Daily</item>
+        <item>Repeat Weekly</item>
+        <item>Repeat Monthly</item>
+    </string-array>
+    <string name="direction_prompt">Repeat</string>
+    <string-array name="direction_arrays">
+        <item>One Way Trip</item>
+        <item>Round Trip</item>
+    </string-array>
+
+    <string name="facebook_app_id">204011407335616</string>
+    <string name="fb_login_protocol_scheme">fb204011407335616</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NoNotes">No Notes</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="create_floating_widget">Create Floating Widget</string>
+    <string name="floating_widget_label">Floating Widget Label</string>
+    <string name="floating_widget_details">Floating Widget Details</string>
+    <string name="draw_other_app_permission_denied">Draw over other app permission not available. App won\'t work without permission. Please try again.</string>
+</resources>

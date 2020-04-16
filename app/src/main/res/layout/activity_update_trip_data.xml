@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgd7"
+    tools:context=".updateTrip.UpdateTripData"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/backgroundLightBlue"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                tools:context=".updateTrip.UpdateTripData">
+
+
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/Start_Point"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/tripNameUpdated_Field"
+                    app:layout_constraintTop_toBottomOf="@+id/tripNameUpdated_Field" />
+
+                <fragment
+                    android:id="@+id/startPoint_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/End_Point"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/startPoint_fragment"
+                    app:layout_constraintTop_toBottomOf="@+id/startPoint_fragment" />
+
+                <fragment
+                    android:id="@+id/endPoint_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <EditText
+                    android:maxLength="50"
+                    android:gravity="center"
+                    android:id="@+id/tripNameUpdated_Field"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:hint="@string/Trip_Name"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/login_edittext_style"
+                    android:theme="@style/TextPrimaryLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/date_Picker"
+                    android:layout_width="79dp"
+                    android:layout_height="79dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/endPoint_fragment"
+                    android:src="@drawable/calendar_icon" />
+
+                <ImageView
+                    android:id="@+id/time_Picker"
+                    android:layout_width="79dp"
+                    android:layout_height="79dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="44dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/endPoint_fragment"
+                    android:src="@drawable/clock_icon" />
+
+                <Button
+                    android:id="@+id/Update_Trip_Btn"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/glory_button"
+                    android:onClick="updateTripClick"
+                    android:text="Update Trip"
+                    android:textColor="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.385"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/repeat_Spinner_Updated" />
+
+                <Spinner
+                    android:id="@+id/repeat_Spinner_Updated"
+                    android:layout_width="144dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="16dp"
+                    android:entries="@array/repeat_arrays"
+                    android:prompt="@string/repeat_prompt"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_Updated" />
+
+                <Spinner
+                    android:id="@+id/direction_Spinner_updated"
+                    android:layout_width="144dp"
+                    android:layout_height="41dp"
+                    android:layout_marginEnd="16dp"
+                    android:entries="@array/direction_arrays"
+                    android:prompt="@string/direction_prompt"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_Updated" />
+
+                <TextView
+                    android:id="@+id/time_Updated"
+                    android:layout_width="79dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="@+id/time_Picker"
+                    app:layout_constraintTop_toBottomOf="@+id/time_Picker" />
+
+                <TextView
+                    android:id="@+id/date_Updated"
+                    android:layout_width="79dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="@+id/date_Picker"
+                    app:layout_constraintTop_toBottomOf="@+id/date_Picker" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>
